@@ -18,9 +18,9 @@ function listFiles(directory) {
   });
 }
 
-test("build version is 0.010 and visible in footer", () => {
-  assert.match(read("package.json"), /"version": "0\.010"/);
-  assert.match(read("src/data/site.ts"), /BUILD_VERSION = "0\.010"/);
+test("build version is 0.011 and visible in footer", () => {
+  assert.match(read("package.json"), /"version": "0\.011"/);
+  assert.match(read("src/data/site.ts"), /BUILD_VERSION = "0\.011"/);
   assert.match(read("components/SiteFooter.tsx"), /Build \{BUILD_VERSION\}/);
 });
 
