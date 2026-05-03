@@ -40,10 +40,8 @@ export function BlogImage({
         ) : null}
       </div>
       {!frameless ? (
-        <figcaption className="grid gap-2 border-t border-softborder p-4 text-sm leading-6 text-slate-700">
-          <span className="font-bold text-navy">{image.alt}</span>
-          <span>{image.purpose}</span>
-          <span className="text-xs font-semibold uppercase tracking-[0.12em] text-service">{image.placement}</span>
+        <figcaption className="border-t border-softborder p-4 text-sm font-bold leading-6 text-navy">
+          {image.caption || image.alt}
         </figcaption>
       ) : null}
     </figure>

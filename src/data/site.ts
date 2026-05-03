@@ -1,4 +1,4 @@
-export const BUILD_VERSION = "0.011";
+export const BUILD_VERSION = "0.012";
 
 export const siteConfig = {
   name: "ACFix.com",

@@ -1,6 +1,6 @@
 {
   "name": "acfix",
-  "version": "0.011",
+  "version": "0.012",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -18,9 +18,9 @@ function listFiles(directory) {
   });
 }
 
-test("build version is 0.011 and visible in footer", () => {
-  assert.match(read("package.json"), /"version": "0\.011"/);
-  assert.match(read("src/data/site.ts"), /BUILD_VERSION = "0\.011"/);
+test("build version is 0.012 and visible in footer", () => {
+  assert.match(read("package.json"), /"version": "0\.012"/);
+  assert.match(read("src/data/site.ts"), /BUILD_VERSION = "0\.012"/);
   assert.match(read("components/SiteFooter.tsx"), /Build \{BUILD_VERSION\}/);
 });
 
@@ -36,6 +36,21 @@ test("ten seed blog posts are configured", () => {
   assert.equal(slugs.length, 10);
 });
 
+test("blog post dates are within the past six months", () => {
+  const blog = read("src/data/blog.ts");
+  const dates = [...blog.matchAll(/publishedAt: "(\d{4}-\d{2}-\d{2})"/g)].map((match) => match[1]);
+  const today = new Date("2026-05-03T00:00:00Z");
+  const sixMonthsAgo = new Date("2025-11-03T00:00:00Z");
+
+  assert.equal(dates.length, 10);
+
+  for (const date of dates) {
+    const publishedAt = new Date(`${date}T00:00:00Z`);
+    assert.ok(publishedAt <= today, `${date} should not be future-dated`);
+    assert.ok(publishedAt >= sixMonthsAgo, `${date} should be within six months`);
+  }
+});
+
 test("each seed blog post has a cover image entry", () => {
   const blog = read("src/data/blog.ts");
   const imageBlocks = [...blog.matchAll(/images: \[([\s\S]*?)\n    \],/g)];
@@ -46,6 +61,19 @@ test("each seed blog post has a cover image entry", () => {
     assert.match(block, /alt: "/);
     assert.match(block, /prompt:/);
   }
+});
+
+test("blog image captions are public-facing and terminology accurate", () => {
+  const blog = read("src/data/blog.ts");
+  const blogImage = read("components/BlogImage.tsx");
+  const noiseImageBlock = blog.match(/alt: "Homeowner looking at an indoor HVAC air handler"[\s\S]*?src: "\/images\/woman-looking-at-hvac-system\.jpg"[\s\S]*?prompt:\s*\n\s*"[^"]+"/)?.[0] || "";
+  const captionBlock = blogImage.match(/<figcaption[\s\S]*?<\/figcaption>/)?.[0] || "";
+
+  assert.match(blog, /alt: "Homeowner looking at an indoor HVAC air handler"/);
+  assert.match(noiseImageBlock, /Unusual AC noises can come from indoor or outdoor equipment/);
+  assert.doesNotMatch(noiseImageBlock, /outdoor AC condenser/);
+  assert.doesNotMatch(noiseImageBlock, /safe distance/);
+  assert.doesNotMatch(captionBlock, /image\.purpose|image\.placement/);
 });
 
 test("required routes exist", () => {

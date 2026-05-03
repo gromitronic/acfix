@@ -4,7 +4,7 @@ ACFix.com is a Next.js lead intake and referral website for homeowners requestin
 
 ## Version
 
-Current build: `0.011`
+Current build: `0.012`
 
 The build version is stored in `package.json` and `src/data/site.ts`, and it is visible in the footer.
 
@@ -76,6 +76,11 @@ npm run build
 5. Keep schema and page copy clear that ACFix.com is a referral and lead intake service.
 
 ## Change Log
+
+### 0.012
+
+- Ran a blog image accuracy pass, corrected an air-handler/condenser caption mismatch, and replaced internal image metadata captions with public-facing captions.
+- Updated seed blog publish dates so all posts are dated within the past six months.
 
 ### 0.011
 

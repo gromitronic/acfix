@@ -2,6 +2,7 @@ export type BlogImage = {
   placement: "cover" | `after paragraph ${number}`;
   purpose: string;
   alt: string;
+  caption?: string;
   prompt: string;
   src?: string;
 };
@@ -26,7 +27,7 @@ export const blogPosts: BlogPost[] = [
       "Warm air from the vents can mean anything from a thermostat setting to a refrigerant or airflow problem. Here is how to think through the first steps before requesting local HVAC help.",
     metaDescription:
       "Learn common reasons an AC blows warm air in Port St. Lucie and when to request help from a licensed local HVAC partner through ACFix.",
-    publishedAt: "2026-05-02",
+    publishedAt: "2026-04-30",
     readingTime: "5 min read",
     tags: ["AC repair", "Port St. Lucie", "HVAC troubleshooting", "Cooling"],
     images: [
@@ -34,6 +35,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Set the local heat-and-homeowner context before the troubleshooting copy.",
         alt: "Port St. Lucie home exterior with outdoor AC unit on a hot afternoon",
+        caption: "A hot South Florida afternoon can make even a small cooling problem feel urgent.",
         src: "/images/worried-man-outdoor-house-porch.jpg",
         prompt:
           "Bright, realistic Florida home exterior in Port St. Lucie on a hot afternoon, subtle HVAC condenser visible, homeowner looking concerned near a thermostat visible through open doorway, clean editorial style, no logos, no text."
@@ -70,7 +72,7 @@ export const blogPosts: BlogPost[] = [
       "In Florida, comfort is not just about temperature. Humidity can make a cooling problem feel bigger and may point to airflow, runtime, sizing, or maintenance issues.",
     metaDescription:
       "Understand why humidity affects AC comfort in Florida homes and when to request a local HVAC referral through ACFix.",
-    publishedAt: "2026-05-09",
+    publishedAt: "2026-04-16",
     readingTime: "5 min read",
     tags: ["Humidity", "Florida HVAC", "Indoor comfort", "AC maintenance"],
     images: [
@@ -78,6 +80,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Introduce humidity as the central comfort problem.",
         alt: "Humid Florida living room with thermostat and window condensation",
+        caption: "Humidity can leave a home feeling uncomfortable even when the thermostat looks normal.",
         src: "/images/modern-living-room-thermostat-view.jpg",
         prompt:
           "Realistic interior of a Florida living room with sunlight, thermostat showing high humidity without readable numbers, subtle condensation on a window, clean lifestyle photography, no text."
@@ -113,7 +116,7 @@ export const blogPosts: BlogPost[] = [
       "A seasonal AC tune-up can help catch small issues before peak heat puts your system under pressure. Here is what Port St. Lucie homeowners should know.",
     metaDescription:
       "Learn why AC tune-ups matter in Port St. Lucie and how ACFix can connect homeowners with local HVAC partner contractors.",
-    publishedAt: "2026-05-16",
+    publishedAt: "2026-04-02",
     readingTime: "5 min read",
     tags: ["AC tune-up", "Maintenance", "Port St. Lucie", "HVAC partners"],
     images: [
@@ -121,6 +124,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Present maintenance as routine and professional.",
         alt: "HVAC professional inspecting an outdoor condenser beside a Florida home",
+        caption: "Routine maintenance can help spot outdoor unit issues before peak summer heat.",
         src: "/images/hvac-technician-repairing-air-conditioner.jpg",
         prompt:
           "Licensed HVAC professional inspecting an outdoor condenser beside a Florida home, sunny clean setting, realistic photography, no company logo, no text."
@@ -156,7 +160,7 @@ export const blogPosts: BlogPost[] = [
       "A few quick checks can help you describe the issue clearly and avoid confusion when a local HVAC partner contacts you.",
     metaDescription:
       "Before requesting AC repair, use this simple homeowner checklist to gather details for a local HVAC partner.",
-    publishedAt: "2026-05-23",
+    publishedAt: "2026-03-19",
     readingTime: "6 min read",
     tags: ["AC repair", "Homeowner checklist", "HVAC referral", "Troubleshooting"],
     images: [
@@ -164,6 +168,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Frame the post as a practical homeowner checklist.",
         alt: "Homeowner writing AC symptoms on a notepad near a thermostat",
+        caption: "Writing down symptoms helps a local HVAC partner understand the issue faster.",
         src: "/images/woman-writing-notes-indoor-home.jpg",
         prompt:
           "Homeowner writing AC symptoms on a notepad near a thermostat, clean Florida kitchen background, practical and realistic, no text."
@@ -201,7 +206,7 @@ export const blogPosts: BlogPost[] = [
       "When an older AC breaks down, the right choice depends on age, repair cost, comfort, efficiency, and how long you plan to stay in the home.",
     metaDescription:
       "Learn key factors homeowners should consider when deciding whether to repair or replace an older AC system.",
-    publishedAt: "2026-05-30",
+    publishedAt: "2026-03-05",
     readingTime: "5 min read",
     tags: ["AC replacement", "HVAC repair", "Home comfort", "Florida homes"],
     images: [
@@ -209,6 +214,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Show the repair-versus-replace decision visually.",
         alt: "Older AC condenser compared with newer AC condenser near a Florida home",
+        caption: "Repair or replacement decisions should factor in age, cost, comfort, and reliability.",
         src: "/images/man-explaining-air-conditioner-woman.jpg",
         prompt:
           "Side-by-side visual of an older outdoor AC condenser and a newer clean condenser near a Florida home, realistic editorial photo, no text."
@@ -245,7 +251,7 @@ export const blogPosts: BlogPost[] = [
       "A clogged condensate drain line can shut down cooling or cause water issues. Florida homeowners should know the warning signs.",
     metaDescription:
       "Learn why AC condensate drain lines matter in Florida homes and when to request local HVAC help.",
-    publishedAt: "2026-06-06",
+    publishedAt: "2026-02-19",
     readingTime: "5 min read",
     tags: ["Drain line", "AC maintenance", "Florida HVAC", "Water leak"],
     images: [
@@ -253,6 +259,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Introduce the drain line and condensate pan clearly.",
         alt: "Indoor HVAC air handler area with condensate drain line and pan",
+        caption: "Condensate drain problems usually start near the indoor air handler and drain pan.",
         src: "/images/drain-pan-washing-machine-corner.jpg",
         prompt:
           "Close realistic photo of an indoor HVAC air handler area with clean drain line and pan, bright utility closet, no water damage, no text."
@@ -289,7 +296,7 @@ export const blogPosts: BlogPost[] = [
       "Weak airflow can come from filters, ducts, blower issues, frozen coils, or blocked vents. Here is how to describe the problem before asking for help.",
     metaDescription:
       "Understand common causes of weak AC airflow and how ACFix can help connect homeowners with local HVAC partners.",
-    publishedAt: "2026-06-13",
+    publishedAt: "2026-02-05",
     readingTime: "5 min read",
     tags: ["Airflow", "AC repair", "Ductwork", "HVAC troubleshooting"],
     images: [
@@ -297,6 +304,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Make the weak-airflow symptom immediately recognizable.",
         alt: "Homeowner checking weak airflow from an air vent",
+        caption: "Weak airflow can come from simple filter issues or problems that need professional attention.",
         src: "/images/man-checking-air-vent-interior.jpg",
         prompt:
           "Realistic photo of a homeowner holding a hand near an air vent checking airflow in a bright Florida hallway, no text, clean editorial style."
@@ -333,7 +341,7 @@ export const blogPosts: BlogPost[] = [
       "Even when you get a referral, it is smart to ask clear questions about licensing, pricing, warranties, and scope before approving HVAC work.",
     metaDescription:
       "Use these homeowner questions before hiring an HVAC contractor for AC repair, maintenance, or replacement.",
-    publishedAt: "2026-06-20",
+    publishedAt: "2026-01-22",
     readingTime: "5 min read",
     tags: ["Hiring HVAC", "Homeowner tips", "Referral disclosure", "Contractor questions"],
     images: [
@@ -341,6 +349,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Show the homeowner-contractor conversation in a trustworthy way.",
         alt: "Homeowner speaking with HVAC professional at front door",
+        caption: "A referral is only the first step; homeowners should still ask clear contractor questions.",
         src: "/images/man-smiling-at-woman-doorway.jpg",
         prompt:
           "Homeowner speaking with HVAC professional at front door of a Florida home, professional and friendly, realistic photo, no logos, no text."
@@ -378,7 +387,7 @@ export const blogPosts: BlogPost[] = [
       "ACFix is built to make the first step easier: submit your HVAC issue once and get routed toward a local partner where available.",
     metaDescription:
       "Learn how ACFix works as an HVAC referral service connecting homeowners with independent local HVAC partners.",
-    publishedAt: "2026-06-27",
+    publishedAt: "2026-01-08",
     readingTime: "5 min read",
     tags: ["ACFix", "HVAC referral", "Homeowners", "Local partners"],
     images: [
@@ -386,6 +395,7 @@ export const blogPosts: BlogPost[] = [
         placement: "cover",
         purpose: "Show the referral request as the starting point.",
         alt: "Homeowner submitting an HVAC referral request on a laptop",
+        caption: "ACFix helps route homeowner requests to independent local HVAC partners where available.",
         src: "/images/man-using-laptop-cozy-living-room.jpg",
         prompt:
           "Clean modern web form on a laptop in a Florida home, homeowner submitting an HVAC request, bright natural light, no readable text, no logos."
@@ -422,17 +432,18 @@ export const blogPosts: BlogPost[] = [
       "Buzzing, rattling, squealing, clicking, and banging sounds can point to different AC issues. Here is when to stop guessing and request local HVAC help.",
     metaDescription:
       "Learn what common AC noises may indicate and when homeowners should request help from a local HVAC partner.",
-    publishedAt: "2026-07-04",
+    publishedAt: "2025-12-18",
     readingTime: "5 min read",
     tags: ["AC noises", "HVAC repair", "Troubleshooting", "Home comfort"],
     images: [
       {
         placement: "cover",
         purpose: "Make the noise issue visible without dramatizing it.",
-        alt: "Homeowner listening to an outdoor AC condenser from a safe distance",
+        alt: "Homeowner looking at an indoor HVAC air handler",
+        caption: "Unusual AC noises can come from indoor or outdoor equipment, so note where the sound starts.",
         src: "/images/woman-looking-at-hvac-system.jpg",
         prompt:
-          "Realistic close-up of outdoor AC condenser beside a Florida home with homeowner listening from a safe distance, sunny day, no text, no logos."
+          "Realistic photo of an indoor HVAC air handler in a Florida home with homeowner observing the equipment, no active repair, no text, no logos."
       },
       {
         placement: "after paragraph 2",
@@ -451,7 +462,7 @@ export const blogPosts: BlogPost[] = [
     ],
     body: [
       "An AC system does not have to be silent, but new or loud noises deserve attention. The sound can give a local HVAC professional useful clues.",
-      "A buzzing sound may involve electrical components, a struggling motor, loose parts, or debris near the outdoor unit. A rattling sound may point to loose panels, worn components, or something caught where it should not be. Squealing can sometimes involve belts or motor bearings, depending on the system. Clicking at startup may be normal in small amounts, but repeated clicking without the system starting can point to a control or electrical issue. Banging or clanking should be taken seriously because it may involve a loose or damaged part.",
+      "A buzzing sound may involve electrical components, a struggling motor, loose parts, or debris near the outdoor unit. A rattling sound may point to loose panels, worn components, or something caught where it should not be. Squealing can involve blower or motor bearings, and on some systems belt-related issues. Clicking at startup may be normal in small amounts, but repeated clicking without the system starting can point to a control or electrical issue. Banging or clanking should be taken seriously because it may involve a loose or damaged part.",
       "Do not open electrical panels or reach into equipment to investigate. If a sound is loud, sudden, or paired with burning smells, poor cooling, water, or the system shutting down, turn the system off and request professional help.",
       "When you submit a service request, describe the noise in plain language. Say where it is coming from, when it happens, whether the system still cools, and whether the noise started suddenly or has been getting worse.",
       "ACFix can help route your AC noise request to an independent local HVAC partner where available. ACFix is not an HVAC contractor and does not diagnose or repair systems directly. The partner contractor will handle inspection, estimates, scheduling, and service terms.",
